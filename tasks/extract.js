@@ -39,7 +39,8 @@ module.exports = function (grunt) {
                 catalog.headers = {
                     'Content-Type': 'text/plain; charset=UTF-8',
                     'Content-Transfer-Encoding': '8bit',
-                    'Project-Id-Version': ''
+                    'Project-Id-Version': '',
+                    'Language': /conf\/locale\/(.+)\/LC_MESSAGES\/django.po/.exec(file.dest)[1]
                 };
 
                 for (var index in catalog.items) {
